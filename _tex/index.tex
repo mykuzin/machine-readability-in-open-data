@@ -91,39 +91,6 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
-% definitions for citeproc citations
-\NewDocumentCommand\citeproctext{}{}
-\NewDocumentCommand\citeproc{mm}{%
-  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
-\makeatletter
- % allow citations to break across lines
- \let\@cite@ofmt\@firstofone
- % avoid brackets around text for \cite:
- \def\@biblabel#1{}
- \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
-\makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
- {\begin{list}{}{%
-  \setlength{\itemindent}{0pt}
-  \setlength{\leftmargin}{0pt}
-  \setlength{\parsep}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-   \setlength{\leftmargin}{\cslhangindent}
-   \setlength{\itemindent}{-1\cslhangindent}
-  \fi
-  % set entry spacing
-  \setlength{\itemsep}{#2\baselineskip}}}
- {\end{list}}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
@@ -177,9 +144,9 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={La Palma Earthquakes Mechanisms},
-  pdfauthor={Steve Purves; Rowan Cockett},
-  pdfkeywords={La Palma, Earthquakes},
+  pdftitle={Яка машиночитаність потрібна для доступності використання відкритих даних},
+  pdfauthor={Микола Кузін},
+  pdfkeywords={машиночитаність, відкриті дані},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -188,72 +155,73 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\journalname{Earth and Space Science}
 
 \draftfalse
 
 \begin{document}
-\title{La Palma Earthquakes Mechanisms}
+\title{Яка машиночитаність потрібна для доступності використання
+відкритих даних}
 
-\authors{Steve Purves\affil{1}, Rowan Cockett\affil{1}}
-\affiliation{1}{Curvenote, }
-\correspondingauthor{Steve Purves}{steve@curvenote.com}
+\authors{Микола Кузін\affil{1}}
+\affiliation{1}{BRDO, }
+\correspondingauthor{Микола Кузін}{m.kuzin@brdo.com.ua}
 
 
 \begin{abstract}
-In September 2021, a significant jump in seismic activity on the island
-of La Palma (Canary Islands, Spain) signaled the start of a volcanic
-crisis that still continues at the time of writing. Earthquake data is
-continually collected and published by the Instituto Geográphico
-Nacional (IGN). \ldots{}
+Говорячи про машиночитаність, слід розрізняти
 \end{abstract}
 
-\section*{Plain Language Summary}
-Earthquake data for the island of La Palma from the September 2021
-eruption is found \ldots{}
 
 
 
 
-\section{Introduction}\label{introduction}
+\section{Вільний доступ vs доступність використання відкритих
+даних}\label{ux432ux456ux43bux44cux43dux438ux439-ux434ux43eux441ux442ux443ux43f-vs-ux434ux43eux441ux442ux443ux43fux43dux456ux441ux442ux44c-ux432ux438ux43aux43eux440ux438ux441ux442ux430ux43dux43dux44f-ux432ux456ux434ux43aux440ux438ux442ux438ux445-ux434ux430ux43dux438ux445}
 
-\textsubscript{Source:
-\href{https://mykuzin.github.io/machine-readability-in-open-data/index.qmd.html}{Article
-Notebook}}
+За визначенням Open Knowledge Foundation, розробників CKAN, на якій
+реалізований український Портал відкритих даних, ``відкритість'' даних
+полягає в тому, що будь-хто може мати до них вільний доступ, вільно
+використовувати, змінювати та ділитися ними.
 
-\phantomsection\label{cell-fig-timeline}
-\begin{figure}[H]
+Однак ``вільний'' не завжди значить ``відкритий'': часто потрібні
+додаткові кроки, щоби з інформації у вільному доступі зробити дані,
+доступні до використання.
 
-\centering{
+У Постанові КМУ № 835 ``доступність використання'' відкритих даних
+напряму пов'язується з машиночитаним форматом оприлюднених даних. А
+машиночитаність --- зі структурованістю даних, що уможливлює обробку без
+участі людини (власне, машинну обробку). У Постанові також визначено
+перелік форматів (розширень) структурованих
 
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-pdf/fig-timeline-1.pdf}}
+Подивимося на значення машиночитаності в контексті відкритих даних і
+поміркуємо
 
-}
+Free is not Always Open. Making data freely available is only the first
+step in making it open for all to reuse. There are layers of barriers
+between information that anyone can get and data that anyone can use.
+This is because making the data open is not always about licences or the
+format issues, but it is also about comprehension and access. Open data
+should not require additional time, resources and expertise to be used.
 
-\caption{\label{fig-timeline}Timeline of recent earthquakes on La Palma}
+``Open means~anyone~can~freely access, use, modify, and share~for~any
+purpose~(subject, at most, to requirements that preserve provenance and
+openness).''
 
-\end{figure}%
-
-\textsubscript{Source:
-\href{https://mykuzin.github.io/machine-readability-in-open-data/index.qmd.html}{Article
-Notebook}}
-
-\textsubscript{Source:
-\href{https://mykuzin.github.io/machine-readability-in-open-data/index.qmd.html}{Article
-Notebook}}
+Тому при відкритті даних слід зважати не лише на ліцензії та формати
+даних, а й на сприйняття та доступність користувачеві.
 
 Based on data up to and including 1971, eruptions on La Palma happen
-every 79.8 years on average.
+every \texttt{\{r\}\ round(avg\_years\_between\_eruptions,\ 1)} years on
+average.
 
-Studies of the magma systems feeding the volcano, such as Marrero et al.
-(2019), have proposed that there are two main magma reservoirs feeding
-the Cumbre Vieja volcano; one in the mantle (30-40km depth) which
-charges and in turn feeds a shallower crustal reservoir (10-20km depth).
+Studies of the magma systems feeding the volcano, save proposed that
+there are two main magma reservoirs feeding the Cumbre Vieja volcano;
+one in the mantle (30-40km depth) which charges and in turn feeds a
+shallower crustal reservoir (10-20km depth).
 
-Eight eruptions have been recorded since the late 1400s
-(Figure~\ref{fig-timeline}).
+Eight eruptions have been recorded since the late 1400
 
-Data and methods are discussed in Section~\ref{sec-data-methods}.
+Data and methods are discus
 
 Let \(x\) denote the number of eruptions in a year. Then, \(x\) can be
 modeled by a Poisson distribution
@@ -262,9 +230,8 @@ modeled by a Poisson distribution
 p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
 }\end{equation}
 
-where \(\lambda\) is the rate of eruptions per year. Using
-Equation~\ref{eq-poisson}, the probability of an eruption in the next
-\(t\) years can be calculated.
+where \(\lambda\) is the rate of eruptions per year. robability of an
+eruption in the next \(t\) years can be calculated.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{Recent historic eruptions on La
@@ -289,8 +256,8 @@ Tajuya near El Paso & 1585 \\
 Montaña Quemada & 1492 \\
 \end{longtable}
 
-Table~\ref{tbl-history} summarises the eruptions recorded since the
-colonization of the islands by Europeans in the late 1400s.
+the eruptions recorded since the colonization of the islands by
+Europeans in the late 1400s.
 
 \begin{figure}
 
@@ -305,47 +272,11 @@ colonization of the islands by Europeans in the late 1400s.
 \end{figure}%
 
 La Palma is one of the west most islands in the Volcanic Archipelago of
-the Canary Islands (Figure~\ref{fig-map}).
-
-\begin{figure}[H]
-
-\centering{
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png}}
-
-}
-
-\caption{\label{fig-spatial-plot}Locations of earthquakes on La Palma
-since 2017}
-
-\end{figure}%
-
-\textsubscript{Source:
-\href{https://mykuzin.github.io/machine-readability-in-open-data/notebooks/explore-earthquakes-preview.html\#cell-fig-spatial-plot}{Explore
-Earthquakes}}
-
-Figure~\ref{fig-spatial-plot} shows the location of recent Earthquakes
-on La Palma.
+the Canary Islan
 
 \section{Data \& Methods}\label{sec-data-methods}
 
 \section{Conclusion}\label{conclusion}
-
-\section*{References}\label{references}
-\addcontentsline{toc}{section}{References}
-
-\phantomsection\label{refs}
-\begin{CSLReferences}{1}{0}
-\vspace{1em}
-
-\bibitem[\citeproctext]{ref-marrero2019}
-Marrero, J., García, A., Berrocoso, M., Llinares, Á., Rodríguez-Losada,
-A., \& Ortiz, R. (2019). Strategies for the development of volcanic
-hazard maps in monogenetic volcanic fields: The example of {La} {Palma}
-({Canary} {Islands}). \emph{Journal of Applied Volcanology}, \emph{8}.
-\url{https://doi.org/10.1186/s13617-019-0085-5}
-
-\end{CSLReferences}
 
 
 
