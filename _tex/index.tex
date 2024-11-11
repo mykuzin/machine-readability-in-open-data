@@ -168,7 +168,12 @@
 
 
 \begin{abstract}
-Говорячи про машиночитаність, слід розрізняти
+Машиночитаність --- широкий термін, що може позначати як технічні вимоги
+до оформлення веб-ресурсів (як 5-Star Linked Data), що уможливлює їхню
+автоматизовану взаємодію в мережі Інтернет, так і доступність
+автоматизованої обробки з боку кінцевих користувачів. За кожним з цих
+значень стоять різні стандарти та практики --- і ці значення слід
+розрізняти між собою, готуючи набори відкритих даних до публікації.
 \end{abstract}
 
 
@@ -178,105 +183,87 @@
 \section{Вільний доступ vs доступність використання відкритих
 даних}\label{ux432ux456ux43bux44cux43dux438ux439-ux434ux43eux441ux442ux443ux43f-vs-ux434ux43eux441ux442ux443ux43fux43dux456ux441ux442ux44c-ux432ux438ux43aux43eux440ux438ux441ux442ux430ux43dux43dux44f-ux432ux456ux434ux43aux440ux438ux442ux438ux445-ux434ux430ux43dux438ux445}
 
-За визначенням Open Knowledge Foundation, розробників CKAN, на якій
-реалізований український Портал відкритих даних, ``відкритість'' даних
-полягає в тому, що будь-хто може мати до них вільний доступ, вільно
-використовувати, змінювати та ділитися ними.
+За визначенням Open Knowledge Foundation ---розробників CKAN, на якій
+реалізований український Портал відкритих даних --- ``відкритість''
+даних полягає в тому, що будь-хто може мати до них вільний доступ,
+вільно використовувати, змінювати та ділитися ними\footnote{\url{https://opendefinition.org/od/2.0/ua/}}.
 
-Однак ``вільний'' не завжди значить ``відкритий'': часто потрібні
-додаткові кроки, щоби з інформації у вільному доступі зробити дані,
-доступні до використання.
+\href{https://aims.gitbook.io/open-data-mooc/unit-1-open-data-principles/lesson-1.1-what-is-open-data\#id-5.-challenges}{Однак
+``вільний'' не завжди значить ``відкритий''}: часто потрібні додаткові
+кроки, щоби з інформації у вільному доступі зробити дані, доступні до
+використання.
 
-У Постанові КМУ № 835 ``доступність використання'' відкритих даних
-напряму пов'язується з машиночитаним форматом оприлюднених даних. А
-машиночитаність --- зі структурованістю даних, що уможливлює обробку без
-участі людини (власне, машинну обробку). У Постанові також визначено
-перелік форматів (розширень) структурованих
+Доступність використання --- важлива категорія. У Постанові КМУ № 835
+принцип ``доступності використання'' відкритих даних напряму
+пов'язується з машиночитаним форматом оприлюднених даних. А
+машиночитаність --- зі структурованістю, що уможливлює обробку без
+участі людини (власне, машинну обробку). У тому ж документі визначено
+перелік структурованих форматів (розширень), що використовуються для
+оприлюднення наборів. Сюди відносяться .json, .csv, .xls(x) та інші.
 
-Подивимося на значення машиночитаності в контексті відкритих даних і
-поміркуємо
+Але візьмемо набір даних
+``\href{https://data.gov.ua/dataset/8b9b1677-2407-454a-bfa7-76eb638c0ea1}{Єдиний
+звіт про кримінальні правопорушення}'', що оприлюднюється Генеральною
+Прокуратурою на Порталі відкритих даних. Цей набір даних оприлюднюється
+у структурованому форматі .xlsx і відтак, відповідно до визначень вище,
+відповідає принципу доступності використання. Втім, заглянуваши
+всередину опублікованих ресурсів (файлів) набору, побачимо, чому про
+``машиночитаність'' та ``доступність використання'' тут можна говорити
+досить умовно:
 
-Free is not Always Open. Making data freely available is only the first
-step in making it open for all to reuse. There are layers of barriers
-between information that anyone can get and data that anyone can use.
-This is because making the data open is not always about licences or the
-format issues, but it is also about comprehension and access. Open data
-should not require additional time, resources and expertise to be used.
+\begin{itemize}
+\tightlist
+\item
+  Всередині однієї вкладки можуть розміщуватися кілька таблиць, одна під
+  одною. Розрізнити їх між собою для роботи в середовищі розробки ``без
+  участі людини'' складно.
+\item
+  Самі таблиці використовуються для відображення ієрархічних структур
+  даних: для прикладу, за рядком ``Усього кримінальних правопорушень''
+  слідують рядки з різнорівневими значеннями ``з них''. Екселівські
+  таблиці --- не кращий спосіб відображення даних, що мають ієрархічну
+  структуру.
+\item
+  Назви колонок йдуть у кілька рядків, частина цих клітинок злита між
+  собою, що далі ускладнює зчитування цих таблиць у середовище розробки.
+\item
+  Значення колонок сумуються --- це різновид дублювання даних і такі
+  рядки треба додатково вичищати
+\end{itemize}
 
-``Open means~anyone~can~freely access, use, modify, and share~for~any
-purpose~(subject, at most, to requirements that preserve provenance and
-openness).''
+На перший погляд маємо парадокс: набір даних опублікований у
+структурованому форматі .xlsx і тому є машиночитаним, але для прочитання
+в середовищі розробки (машинної обробки) потребує суттєвої участі людини
+і тому не є машиночитаним. Цей парадокс зникає, коли детальніше дивимося
+на значення, в яких машиночитаність може використовуватись:
 
-Тому при відкритті даних слід зважати не лише на ліцензії та формати
-даних, а й на сприйняття та доступність користувачеві.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Машиночитаність як ступінь інтегрованості набору даних у мережу
+  Інтернет\footnote{\url{https://blog.ldodds.com/2015/02/20/comparing-the-5-star-scheme-with-open-data-certificates/}}.
+  Сюди відносяться вимоги та рекомендації, які дозволяють веб-ресурсам
+  правильно і повно взаємодіяти один з одним. Публікація набору даних у
+  структурованому форматі .xlsx --- це вже приклад відповідності таким
+  вимогам\footnote{\url{https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data}}.
+  Це технічна сторона вимог до оформлення веб-ресурсу --- концепція
+  \emph{5-Star Linked Data} Тіма Бернерса-Лі є найвідомішим прикладом
+  рекомендацій щодо машиночитаності.
+\item
+  Машиночитаність як чистота даних та відповідність використовуваних
+  форматів потребам користувачів. Поняття tidy data, критерії Open Data
+  certificate, важливість юз-кейсів/ розуміння, хто буде користуватися
+  наборами.
+\end{enumerate}
 
-Based on data up to and including 1971, eruptions on La Palma happen
-every \texttt{\{r\}\ round(avg\_years\_between\_eruptions,\ 1)} years on
-average.
+\section{Машиночитаність як інтегрованість набору даних у мережу
+Інтернет}\label{ux43cux430ux448ux438ux43dux43eux447ux438ux442ux430ux43dux456ux441ux442ux44c-ux44fux43a-ux456ux43dux442ux435ux433ux440ux43eux432ux430ux43dux456ux441ux442ux44c-ux43dux430ux431ux43eux440ux443-ux434ux430ux43dux438ux445-ux443-ux43cux435ux440ux435ux436ux443-ux456ux43dux442ux435ux440ux43dux435ux442}
 
-Studies of the magma systems feeding the volcano, save proposed that
-there are two main magma reservoirs feeding the Cumbre Vieja volcano;
-one in the mantle (30-40km depth) which charges and in turn feeds a
-shallower crustal reservoir (10-20km depth).
+\subsection{а. 5-Star Linked}\label{ux430.-5-star-linked}
 
-Eight eruptions have been recorded since the late 1400
-
-Data and methods are discus
-
-Let \(x\) denote the number of eruptions in a year. Then, \(x\) can be
-modeled by a Poisson distribution
-
-\begin{equation}\phantomsection\label{eq-poisson}{
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-}\end{equation}
-
-where \(\lambda\) is the rate of eruptions per year. robability of an
-eruption in the next \(t\) years can be calculated.
-
-\begin{longtable}[]{@{}ll@{}}
-\caption{Recent historic eruptions on La
-Palma}\label{tbl-history}\tabularnewline
-\toprule\noalign{}
-Name & Year \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Name & Year \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Current & 2021 \\
-Teneguía & 1971 \\
-Nambroque & 1949 \\
-El Charco & 1712 \\
-Volcán San Antonio & 1677 \\
-Volcán San Martin & 1646 \\
-Tajuya near El Paso & 1585 \\
-Montaña Quemada & 1492 \\
-\end{longtable}
-
-the eruptions recorded since the colonization of the islands by
-Europeans in the late 1400s.
-
-\begin{figure}
-
-\centering{
-
-\pandocbounded{\includegraphics[keepaspectratio]{images/la-palma-map.png}}
-
-}
-
-\caption{\label{fig-map}Map of La Palma}
-
-\end{figure}%
-
-La Palma is one of the west most islands in the Volcanic Archipelago of
-the Canary Islan
-
-\section{Data \& Methods}\label{sec-data-methods}
-
-\section{Conclusion}\label{conclusion}
+\section{Машиночитаність як відповідність потребам
+користувачів}\label{sec-data-methods}
 
 
 

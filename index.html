@@ -36,9 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-27262f0026302d056883bfd2faaf8757.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -46,38 +43,9 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <meta name="citation_title" content="Яка машиночитаність потрібна для доступності використання відкритих даних">
-<meta name="citation_abstract" content="Говорячи про машиночитаність, слід розрізняти
+<meta name="citation_abstract" content="Машиночитаність — широкий термін, що може позначати як технічні вимоги до оформлення веб-ресурсів (як 5-Star Linked Data), що уможливлює їхню автоматизовану взаємодію в мережі Інтернет, так і доступність автоматизованої обробки з боку кінцевих користувачів. За кожним з цих значень стоять різні стандарти та практики — і ці значення слід розрізняти між собою, готуючи набори відкритих даних до публікації.
 ">
 <meta name="citation_keywords" content="машиночитаність,відкриті дані">
 <meta name="citation_author" content="Микола Кузін">
@@ -133,7 +101,7 @@ window.Quarto = {
     <div>
       <div class="abstract">
         <div class="block-title">Abstract</div>
-        <p>Говорячи про машиночитаність, слід розрізняти</p>
+        <p>Машиночитаність — широкий термін, що може позначати як технічні вимоги до оформлення веб-ресурсів (як 5-Star Linked Data), що уможливлює їхню автоматизовану взаємодію в мережі Інтернет, так і доступність автоматизованої обробки з боку кінцевих користувачів. За кожним з цих значень стоять різні стандарти та практики — і ці значення слід розрізняти між собою, готуючи набори відкритих даних до публікації.</p>
       </div>
     </div>
 
@@ -153,10 +121,13 @@ window.Quarto = {
    
   <ul>
   <li><a href="#вільний-доступ-vs-доступність-використання-відкритих-даних" id="toc-вільний-доступ-vs-доступність-використання-відкритих-даних" class="nav-link active" data-scroll-target="#вільний-доступ-vs-доступність-використання-відкритих-даних"><span class="header-section-number">1</span> Вільний доступ vs доступність використання відкритих даних</a></li>
-  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
+  <li><a href="#машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет" id="toc-машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет" class="nav-link" data-scroll-target="#машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет"><span class="header-section-number">2</span> Машиночитаність як інтегрованість набору даних у мережу Інтернет</a>
+  <ul class="collapse">
+  <li><a href="#а.-5-star-linked" id="toc-а.-5-star-linked" class="nav-link" data-scroll-target="#а.-5-star-linked"><span class="header-section-number">2.1</span> а. 5-Star Linked</a></li>
+  </ul></li>
+  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">3</span> Машиночитаність як відповідність потребам користувачів</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/explore-earthquakes-preview.html"><i class="bi bi-journal-code"></i>Explore Earthquakes</a></li></ul></div></nav>
+</nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -169,94 +140,41 @@ window.Quarto = {
 
 <section id="вільний-доступ-vs-доступність-використання-відкритих-даних" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="вільний-доступ-vs-доступність-використання-відкритих-даних"><span class="header-section-number">1</span> Вільний доступ vs доступність використання відкритих даних</h2>
-<p>За визначенням Open Knowledge Foundation, розробників CKAN, на якій реалізований український Портал відкритих даних, “відкритість” даних полягає в тому, що будь-хто може мати до них вільний доступ, вільно використовувати, змінювати та ділитися ними.</p>
-<p>Однак “вільний” не завжди значить “відкритий”: часто потрібні додаткові кроки, щоби з інформації у вільному доступі зробити дані, доступні до використання.</p>
-<p>У Постанові КМУ № 835 “доступність використання” відкритих даних напряму пов’язується з машиночитаним форматом оприлюднених даних. А машиночитаність — зі структурованістю даних, що уможливлює обробку без участі людини (власне, машинну обробку). У Постанові також визначено перелік форматів (розширень) структурованих</p>
-<p>Подивимося на значення машиночитаності в контексті відкритих даних і поміркуємо</p>
-<p>Free is not Always Open. Making data freely available is only the first step in making it open for all to reuse. There are layers of barriers between information that anyone can get and data that anyone can use. This is because making the data open is not always about licences or the format issues, but it is also about comprehension and access. Open data should not require additional time, resources and expertise to be used.</p>
-<p>“Open means&nbsp;anyone&nbsp;can&nbsp;freely access, use, modify, and share&nbsp;for&nbsp;any purpose&nbsp;(subject, at most, to requirements that preserve provenance and openness).”</p>
-<p>Тому при відкритті даних слід зважати не лише на ліцензії та формати даних, а й на сприйняття та доступність користувачеві.</p>
-<p>Based on data up to and including 1971, eruptions on La Palma happen every <code>{r} round(avg_years_between_eruptions, 1)</code> years on average.</p>
-<p>Studies of the magma systems feeding the volcano, save proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-<p>Eight eruptions have been recorded since the late 1400</p>
-<p>Data and methods are discus</p>
-<p>Let <span class="math inline">\(x\)</span> denote the number of eruptions in a year. Then, <span class="math inline">\(x\)</span> can be modeled by a Poisson distribution</p>
-<p><span id="eq-poisson"><span class="math display">\[
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-\tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(\lambda\)</span> is the rate of eruptions per year. robability of an eruption in the next <span class="math inline">\(t\)</span> years can be calculated.</p>
-<div id="tbl-history" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Recent historic eruptions on La Palma
-</figcaption>
-<div aria-describedby="tbl-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Year</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Current</td>
-<td>2021</td>
-</tr>
-<tr class="even">
-<td>Teneguía</td>
-<td>1971</td>
-</tr>
-<tr class="odd">
-<td>Nambroque</td>
-<td>1949</td>
-</tr>
-<tr class="even">
-<td>El Charco</td>
-<td>1712</td>
-</tr>
-<tr class="odd">
-<td>Volcán San Antonio</td>
-<td>1677</td>
-</tr>
-<tr class="even">
-<td>Volcán San Martin</td>
-<td>1646</td>
-</tr>
-<tr class="odd">
-<td>Tajuya near El Paso</td>
-<td>1585</td>
-</tr>
-<tr class="even">
-<td>Montaña Quemada</td>
-<td>1492</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.</p>
-<div id="fig-map" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/la-palma-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Map of La Palma"><img src="images/la-palma-map.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Map of La Palma
-</figcaption>
-</figure>
-</div>
-<p>La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islan</p>
+<p>За визначенням Open Knowledge Foundation —розробників CKAN, на якій реалізований український Портал відкритих даних — “відкритість” даних полягає в тому, що будь-хто може мати до них вільний доступ, вільно використовувати, змінювати та ділитися ними<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p><a href="https://aims.gitbook.io/open-data-mooc/unit-1-open-data-principles/lesson-1.1-what-is-open-data#id-5.-challenges">Однак “вільний” не завжди значить “відкритий”</a>: часто потрібні додаткові кроки, щоби з інформації у вільному доступі зробити дані, доступні до використання.</p>
+<p>Доступність використання — важлива категорія. У Постанові КМУ № 835 принцип “доступності використання” відкритих даних напряму пов’язується з машиночитаним форматом оприлюднених даних. А машиночитаність — зі структурованістю, що уможливлює обробку без участі людини (власне, машинну обробку). У тому ж документі визначено перелік структурованих форматів (розширень), що використовуються для оприлюднення наборів. Сюди відносяться .json, .csv, .xls(x) та інші.</p>
+<p>Але візьмемо набір даних “<a href="https://data.gov.ua/dataset/8b9b1677-2407-454a-bfa7-76eb638c0ea1">Єдиний звіт про кримінальні правопорушення</a>”, що оприлюднюється Генеральною Прокуратурою на Порталі відкритих даних. Цей набір даних оприлюднюється у структурованому форматі .xlsx і відтак, відповідно до визначень вище, відповідає принципу доступності використання. Втім, заглянуваши всередину опублікованих ресурсів (файлів) набору, побачимо, чому про “машиночитаність” та “доступність використання” тут можна говорити досить умовно:</p>
+<ul>
+<li>Всередині однієї вкладки можуть розміщуватися кілька таблиць, одна під одною. Розрізнити їх між собою для роботи в середовищі розробки “без участі людини” складно.</li>
+<li>Самі таблиці використовуються для відображення ієрархічних структур даних: для прикладу, за рядком “Усього кримінальних правопорушень” слідують рядки з різнорівневими значеннями “з них”. Екселівські таблиці — не кращий спосіб відображення даних, що мають ієрархічну структуру.</li>
+<li>Назви колонок йдуть у кілька рядків, частина цих клітинок злита між собою, що далі ускладнює зчитування цих таблиць у середовище розробки.</li>
+<li>Значення колонок сумуються — це різновид дублювання даних і такі рядки треба додатково вичищати</li>
+</ul>
+<p>На перший погляд маємо парадокс: набір даних опублікований у структурованому форматі .xlsx і тому є машиночитаним, але для прочитання в середовищі розробки (машинної обробки) потребує суттєвої участі людини і тому не є машиночитаним. Цей парадокс зникає, коли детальніше дивимося на значення, в яких машиночитаність може використовуватись:</p>
+<ol type="1">
+<li>Машиночитаність як ступінь інтегрованості набору даних у мережу Інтернет<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Сюди відносяться вимоги та рекомендації, які дозволяють веб-ресурсам правильно і повно взаємодіяти один з одним. Публікація набору даних у структурованому форматі .xlsx — це вже приклад відповідності таким вимогам<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Це технічна сторона вимог до оформлення веб-ресурсу — концепція <em>5-Star Linked Data</em> Тіма Бернерса-Лі є найвідомішим прикладом рекомендацій щодо машиночитаності.</li>
+<li>Машиночитаність як чистота даних та відповідність використовуваних форматів потребам користувачів. Поняття tidy data, критерії Open Data certificate, важливість юз-кейсів/ розуміння, хто буде користуватися наборами.</li>
+</ol>
 </section>
-<section id="sec-data-methods" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</h2>
+<section id="машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет"><span class="header-section-number">2</span> Машиночитаність як інтегрованість набору даних у мережу Інтернет</h2>
+<section id="а.-5-star-linked" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="а.-5-star-linked"><span class="header-section-number">2.1</span> а. 5-Star Linked</h3>
 </section>
-<section id="conclusion" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3</span> Conclusion</h2>
+</section>
+<section id="sec-data-methods" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">3</span> Машиночитаність як відповідність потребам користувачів</h2>
 </section>
 
-</main>
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://opendefinition.org/od/2.0/ua/" class="uri">https://opendefinition.org/od/2.0/ua/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://blog.ldodds.com/2015/02/20/comparing-the-5-star-scheme-with-open-data-certificates/" class="uri">https://blog.ldodds.com/2015/02/20/comparing-the-5-star-scheme-with-open-data-certificates/</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data" class="uri">https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -679,38 +597,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

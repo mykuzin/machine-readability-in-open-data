@@ -56,7 +56,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <abstract>
-<p>Говорячи про машиночитаність, слід розрізняти</p>
+<p>Машиночитаність — широкий термін, що може позначати як технічні
+вимоги до оформлення веб-ресурсів (як 5-Star Linked Data), що уможливлює
+їхню автоматизовану взаємодію в мережі Інтернет, так і доступність
+автоматизованої обробки з боку кінцевих користувачів. За кожним з цих
+значень стоять різні стандарти та практики — і ці значення слід
+розрізняти між собою, готуючи набори відкритих даних до публікації.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
 <kwd>машиночитаність</kwd>
@@ -74,376 +79,108 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="вільний-доступ-vs-доступність-використання-відкритих-даних">
   <title>1 Вільний доступ vs доступність використання відкритих
   даних</title>
-  <p>За визначенням Open Knowledge Foundation, розробників CKAN, на якій
-  реалізований український Портал відкритих даних, “відкритість” даних
+  <p>За визначенням Open Knowledge Foundation —розробників CKAN, на якій
+  реалізований український Портал відкритих даних — “відкритість” даних
   полягає в тому, що будь-хто може мати до них вільний доступ, вільно
-  використовувати, змінювати та ділитися ними.</p>
-  <p>Однак “вільний” не завжди значить “відкритий”: часто потрібні
+  використовувати, змінювати та ділитися
+  ними<xref ref-type="fn" rid="fn1">1</xref>.</p>
+  <p><ext-link ext-link-type="uri" xlink:href="https://aims.gitbook.io/open-data-mooc/unit-1-open-data-principles/lesson-1.1-what-is-open-data#id-5.-challenges">Однак
+  “вільний” не завжди значить “відкритий”</ext-link>: часто потрібні
   додаткові кроки, щоби з інформації у вільному доступі зробити дані,
   доступні до використання.</p>
-  <p>У Постанові КМУ № 835 “доступність використання” відкритих даних
-  напряму пов’язується з машиночитаним форматом оприлюднених даних. А
-  машиночитаність — зі структурованістю даних, що уможливлює обробку без
-  участі людини (власне, машинну обробку). У Постанові також визначено
-  перелік форматів (розширень) структурованих</p>
-  <p>Подивимося на значення машиночитаності в контексті відкритих даних
-  і поміркуємо</p>
-  <p>Free is not Always Open. Making data freely available is only the
-  first step in making it open for all to reuse. There are layers of
-  barriers between information that anyone can get and data that anyone
-  can use. This is because making the data open is not always about
-  licences or the format issues, but it is also about comprehension and
-  access. Open data should not require additional time, resources and
-  expertise to be used.</p>
-  <p>“Open means anyone can freely access, use, modify, and
-  share for any purpose (subject, at most, to requirements that preserve
-  provenance and openness).”</p>
-  <p>Тому при відкритті даних слід зважати не лише на ліцензії та
-  формати даних, а й на сприйняття та доступність користувачеві.</p>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every
-  <monospace>{r} round(avg_years_between_eruptions, 1)</monospace> years
-  on average.</p>
-  <p>Studies of the magma systems feeding the volcano, save proposed
-  that there are two main magma reservoirs feeding the Cumbre Vieja
-  volcano; one in the mantle (30-40km depth) which charges and in turn
-  feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400</p>
-  <p>Data and methods are discus</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. robability of an eruption in the
-  next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p>the eruptions recorded since the colonization of the islands by
-  Europeans in the late 1400s.</p>
-  <fig id="fig-map">
-    <caption><p>Figure 1: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islan</p>
+  <p>Доступність використання — важлива категорія. У Постанові КМУ № 835
+  принцип “доступності використання” відкритих даних напряму
+  пов’язується з машиночитаним форматом оприлюднених даних. А
+  машиночитаність — зі структурованістю, що уможливлює обробку без
+  участі людини (власне, машинну обробку). У тому ж документі визначено
+  перелік структурованих форматів (розширень), що використовуються для
+  оприлюднення наборів. Сюди відносяться .json, .csv, .xls(x) та
+  інші.</p>
+  <p>Але візьмемо набір даних
+  “<ext-link ext-link-type="uri" xlink:href="https://data.gov.ua/dataset/8b9b1677-2407-454a-bfa7-76eb638c0ea1">Єдиний
+  звіт про кримінальні правопорушення</ext-link>”, що оприлюднюється
+  Генеральною Прокуратурою на Порталі відкритих даних. Цей набір даних
+  оприлюднюється у структурованому форматі .xlsx і відтак, відповідно до
+  визначень вище, відповідає принципу доступності використання. Втім,
+  заглянуваши всередину опублікованих ресурсів (файлів) набору,
+  побачимо, чому про “машиночитаність” та “доступність використання” тут
+  можна говорити досить умовно:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Всередині однієї вкладки можуть розміщуватися кілька таблиць,
+      одна під одною. Розрізнити їх між собою для роботи в середовищі
+      розробки “без участі людини” складно.</p>
+    </list-item>
+    <list-item>
+      <p>Самі таблиці використовуються для відображення ієрархічних
+      структур даних: для прикладу, за рядком “Усього кримінальних
+      правопорушень” слідують рядки з різнорівневими значеннями “з них”.
+      Екселівські таблиці — не кращий спосіб відображення даних, що
+      мають ієрархічну структуру.</p>
+    </list-item>
+    <list-item>
+      <p>Назви колонок йдуть у кілька рядків, частина цих клітинок злита
+      між собою, що далі ускладнює зчитування цих таблиць у середовище
+      розробки.</p>
+    </list-item>
+    <list-item>
+      <p>Значення колонок сумуються — це різновид дублювання даних і
+      такі рядки треба додатково вичищати</p>
+    </list-item>
+  </list>
+  <p>На перший погляд маємо парадокс: набір даних опублікований у
+  структурованому форматі .xlsx і тому є машиночитаним, але для
+  прочитання в середовищі розробки (машинної обробки) потребує суттєвої
+  участі людини і тому не є машиночитаним. Цей парадокс зникає, коли
+  детальніше дивимося на значення, в яких машиночитаність може
+  використовуватись:</p>
+  <list list-type="order">
+    <list-item>
+      <p>Машиночитаність як ступінь інтегрованості набору даних у мережу
+      Інтернет<xref ref-type="fn" rid="fn2">2</xref>. Сюди відносяться
+      вимоги та рекомендації, які дозволяють веб-ресурсам правильно і
+      повно взаємодіяти один з одним. Публікація набору даних у
+      структурованому форматі .xlsx — це вже приклад відповідності таким
+      вимогам<xref ref-type="fn" rid="fn3">3</xref>. Це технічна сторона
+      вимог до оформлення веб-ресурсу — концепція <italic>5-Star Linked
+      Data</italic> Тіма Бернерса-Лі є найвідомішим прикладом
+      рекомендацій щодо машиночитаності.</p>
+    </list-item>
+    <list-item>
+      <p>Машиночитаність як чистота даних та відповідність
+      використовуваних форматів потребам користувачів. Поняття tidy
+      data, критерії Open Data certificate, важливість юз-кейсів/
+      розуміння, хто буде користуватися наборами.</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет">
+  <title>2 Машиночитаність як інтегрованість набору даних у мережу
+  Інтернет</title>
+  <sec id="а.-5-star-linked">
+    <title>2.1 а. 5-Star Linked</title>
+  </sec>
 </sec>
 <sec id="sec-data-methods">
-  <title>2 Data &amp; Methods</title>
-</sec>
-<sec id="conclusion">
-  <title>3 Conclusion</title>
+  <title>3 Машиночитаність як відповідність потребам
+  користувачів</title>
 </sec>
 </body>
 
 <back>
-</back>
-
-<sub-article article-type="notebook" id="nb-8-nb-article">
-<front-stub>
-<title-group>
-<article-title>Яка машиночитаність потрібна для доступності використання
-відкритих даних</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<name>
-<surname>Кузін</surname>
-<given-names>Микола</given-names>
-</name>
-<string-name>Микола Кузін</string-name>
-
-<email>m.kuzin@brdo.com.ua</email>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
-</contrib>
-</contrib-group>
-<aff id="aff-1-nb-article">
-<institution-wrap>
-<institution>BRDO</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<author-notes>
-<corresp id="cor-1-nb-article">m.kuzin@brdo.com.ua</corresp>
-</author-notes>
-<abstract>
-<p>Говорячи про машиночитаність, слід розрізняти</p>
-</abstract>
-</front-stub>
-
-<body>
-<sec id="вільний-доступ-vs-доступність-використання-відкритих-даних-nb-article">
-  <title>1 Вільний доступ vs доступність використання відкритих
-  даних</title>
-  <p>За визначенням Open Knowledge Foundation, розробників CKAN, на якій
-  реалізований український Портал відкритих даних, “відкритість” даних
-  полягає в тому, що будь-хто може мати до них вільний доступ, вільно
-  використовувати, змінювати та ділитися ними.</p>
-  <p>Однак “вільний” не завжди значить “відкритий”: часто потрібні
-  додаткові кроки, щоби з інформації у вільному доступі зробити дані,
-  доступні до використання.</p>
-  <p>У Постанові КМУ № 835 “доступність використання” відкритих даних
-  напряму пов’язується з машиночитаним форматом оприлюднених даних. А
-  машиночитаність — зі структурованістю даних, що уможливлює обробку без
-  участі людини (власне, машинну обробку). У Постанові також визначено
-  перелік форматів (розширень) структурованих</p>
-  <p>Подивимося на значення машиночитаності в контексті відкритих даних
-  і поміркуємо</p>
-  <p>Free is not Always Open. Making data freely available is only the
-  first step in making it open for all to reuse. There are layers of
-  barriers between information that anyone can get and data that anyone
-  can use. This is because making the data open is not always about
-  licences or the format issues, but it is also about comprehension and
-  access. Open data should not require additional time, resources and
-  expertise to be used.</p>
-  <p>“Open means anyone can freely access, use, modify, and
-  share for any purpose (subject, at most, to requirements that preserve
-  provenance and openness).”</p>
-  <p>Тому при відкритті даних слід зважати не лише на ліцензії та
-  формати даних, а й на сприйняття та доступність користувачеві.</p>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every
-  <monospace>{r} round(avg_years_between_eruptions, 1)</monospace> years
-  on average.</p>
-  <p>Studies of the magma systems feeding the volcano, save proposed
-  that there are two main magma reservoirs feeding the Cumbre Vieja
-  volcano; one in the mantle (30-40km depth) which charges and in turn
-  feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400</p>
-  <p>Data and methods are discus</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson-nb-article"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. robability of an eruption in the
-  next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history-nb-article">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p>the eruptions recorded since the colonization of the islands by
-  Europeans in the late 1400s.</p>
-  <fig id="fig-map-nb-article">
-    <caption><p>Figure 1: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islan</p>
-</sec>
-<sec id="sec-data-methods-nb-article">
-  <title>2 Data &amp; Methods</title>
-</sec>
-<sec id="conclusion-nb-article">
-  <title>3 Conclusion</title>
-</sec>
-</body>
-
-
-
-<back>
+<fn-group>
+  <fn id="fn1">
+    <label>1</label><p><ext-link ext-link-type="uri" xlink:href="https://opendefinition.org/od/2.0/ua/">https://opendefinition.org/od/2.0/ua/</ext-link></p>
+  </fn>
+  <fn id="fn2">
+    <label>2</label><p><ext-link ext-link-type="uri" xlink:href="https://blog.ldodds.com/2015/02/20/comparing-the-5-star-scheme-with-open-data-certificates/">https://blog.ldodds.com/2015/02/20/comparing-the-5-star-scheme-with-open-data-certificates/</ext-link></p>
+  </fn>
+  <fn id="fn3">
+    <label>3</label><p><ext-link ext-link-type="uri" xlink:href="https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data">https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data</ext-link></p>
+  </fn>
+</fn-group>
 </back>
 
 
-</sub-article>
-<sub-article article-type="notebook" id="nb-4-nb-1">
-<front-stub>
-<title-group>
-<article-title>Explore Earthquakes</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author">
-<name>
-<surname>Wickham</surname>
-<given-names>Charlotte</given-names>
-</name>
-<string-name>Charlotte Wickham</string-name>
-
-</contrib>
-</contrib-group>
-</front-stub>
-
-<body>
-<sec specific-use="notebook-content">
-<code language="r script">library(tidyverse)
-</code>
-<boxed-text>
-  <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
-</boxed-text>
-</sec>
-<p>Read a clean version of data:</p>
-<sec specific-use="notebook-content">
-<code language="r script">la_palma &lt;- read_csv(&quot;la-palma.csv&quot;)
-</code>
-<boxed-text>
-  <preformat>Rows: 11347 Columns: 5
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-dbl  (4): Longitude, Latitude, Depth(km), Magnitude
-dttm (1): DateTime
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
-</boxed-text>
-</sec>
-<p>Create spatial plot:</p>
-<sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
-<code language="r script">#|   against longitude.&quot;
-la_palma |&gt; 
-  ggplot(aes(Longitude, Latitude)) +
-  geom_point(aes(color = Magnitude, size = 40-`Depth(km)`)) +
-  scale_color_viridis_c(direction = -1) + 
-  scale_size(range = c(0.5, 2), guide = &quot;none&quot;) +
-  theme_bw()
-</code>
-<fig id="fig-spatial-plot-nb-1">
-  <caption><p>Locations of earthquakes on La Palma since
-  2017</p></caption>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="explore-earthquakes_files/figure-jats/fig-spatial-plot-1.png" />
-</fig>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
 
 </article>
