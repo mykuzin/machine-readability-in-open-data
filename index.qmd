@@ -46,6 +46,28 @@ number-sections: true
 
 ## Машиночитаність як інтегрованість набору даних у мережу Інтернет
 
+Винахідник мережі Інтернет Тім Бернерс-Лі розповідав, що на створення Мережі його наштовхнули постійні складнощі обміну документами між різними користувачами. Оскільки це були в основному текстові документи (те, що можна прочитати), звідти маємо "гіпертекстові" (hypertext, ht) посилання, HTTP-протокол, HTML-розмітку для структурування веб-сторінок і ще ряд засадничих для сьогоднішньої Мережі стандартів та технологій.
+
+У 2006 році сер Бернерс-Лі написав статтю[^4], де заявив, що поряд із гіпертекстовою мережею, потрібна мережа даних, бо Всесвітня мережа, поряд з документами, наповнюється все більшим обсягом даних і зрозуміти, що це за інформація без стандартів опису складно. Він сформулював поняття Linked Data, "пов'язаних [лінками] даних", або "залінкованих даних". На відміну від гіпертекстової мережі, де лінки (посилання) на інші документи містяться в тезі `<a>` з атрибутом  `href` у HTML-документі, об'єкт мережі даних містить посилання на інші об'єкти в RDF-документі.
+
+Приклад RDF-розмітки виглядає так:
+
+```
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://example.org/> .
+
+ex:book1
+    dc:title "Linked Data для початківців" ;
+    dc:creator ex:author1 ;
+    dc:subject "Semantic Web" .
+
+ex:author1
+    dc:name "Іван Коваленко" .
+```
+
+
+Якщо не дотримуватись, нічого не поламається, але важко знаходити.
+
 Цей гарний інтерактивний граф з Linked Open Data Cloud
 
 ```{=html}
@@ -54,13 +76,13 @@ number-sections: true
     width: 100%; /* Responsive to container width */
     overflow: hidden; /* Hide any potential overflow */
     position: relative;
-    padding-top: 120%; /* Maintain a 1:1 aspect ratio at 50% height */
+    padding-top: 90%; /* Maintain a 1:1 aspect ratio at 50% height */
   }
 
   .svg-container iframe {
     width: 300%; /* Double the width to scale down to 50% */
-    height: 250%; /* Double the height to scale down to 50% */
-    transform: scale(0.3); /* Scale the content to 50% */
+    height: 320%; /* Double the height to scale down to 50% */
+    transform: scale(.3); /* Scale the content to 50% */
     transform-origin: top left; /* Scale from the top left corner */
     border: none;
     position: absolute;
@@ -77,5 +99,7 @@ number-sections: true
 Зв'язані дані (переклад терміну Linked Data, який дещо губить контекст оскільки будь-які інші зміни неможливі без
 
 ### а. 5-Star Linked
+
+[^4]: <https://www.w3.org/DesignIssues/LinkedData.html>
 
 ## Машиночитаність як відповідність потребам користувачів {#sec-data-methods}
