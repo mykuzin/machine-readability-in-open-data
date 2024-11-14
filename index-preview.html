@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
     <meta name="author" content="Микола Кузін">
-    <meta name="dcterms.date" content="2024-11-13">
+    <meta name="dcterms.date" content="2024-11-14">
     <meta name="keywords" content="машиночитаність, відкриті дані">
 
     <title>Яка машиночитаність потрібна для доступності використання відкритих даних</title>
@@ -136,10 +136,10 @@
 ">
 <meta name="citation_keywords" content="машиночитаність,відкриті дані">
 <meta name="citation_author" content="Микола Кузін">
-<meta name="citation_publication_date" content="2024-11-13">
-<meta name="citation_cover_date" content="2024-11-13">
+<meta name="citation_publication_date" content="2024-11-14">
+<meta name="citation_cover_date" content="2024-11-14">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-11-13">
+<meta name="citation_online_date" content="2024-11-14">
 <meta name="citation_language" content="en">
 </head>
 
@@ -181,7 +181,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">November 13, 2024</p>
+              <p class="date">November 14, 2024</p>
             </div>
           </div>
           
@@ -247,19 +247,33 @@
 </section>
 <section id="машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="машиночитаність-як-інтегрованість-набору-даних-у-мережу-інтернет"><span class="header-section-number">2</span> Машиночитаність як інтегрованість набору даних у мережу Інтернет</h2>
+<p>Винахідник мережі Інтернет Тім Бернерс-Лі розповідав, що на створення Мережі його наштовхнули постійні складнощі обміну документами між різними користувачами. Оскільки це були в основному текстові документи (те, що можна прочитати), звідти маємо “гіпертекстові” (hypertext, ht) посилання, HTTP-протокол, HTML-розмітку для структурування веб-сторінок і ще ряд засадничих для сьогоднішньої Мережі стандартів та технологій.</p>
+<p>У 2006 році сер Бернерс-Лі написав статтю<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, де заявив, що поряд із гіпертекстовою мережею, потрібна мережа даних, бо Всесвітня мережа, поряд з документами, наповнюється все більшим обсягом даних і зрозуміти, що це за інформація без стандартів опису складно. Він сформулював поняття Linked Data, “пов’язаних [лінками] даних”, або “залінкованих даних”. На відміну від гіпертекстової мережі, де лінки (посилання) на інші документи містяться в тезі <code>&lt;a&gt;</code> з атрибутом <code>href</code> у HTML-документі, об’єкт мережі даних містить посилання на інші об’єкти в RDF-документі.</p>
+<p>Приклад RDF-розмітки виглядає так:</p>
+<pre><code>@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+@prefix ex: &lt;http://example.org/&gt; .
+
+ex:book1
+    dc:title "Linked Data для початківців" ;
+    dc:creator ex:author1 ;
+    dc:subject "Semantic Web" .
+
+ex:author1
+    dc:name "Іван Коваленко" .</code></pre>
+<p>Якщо не дотримуватись, нічого не поламається, але важко знаходити.</p>
 <p>Цей гарний інтерактивний граф з Linked Open Data Cloud</p>
 <style>
   .svg-container {
     width: 100%; /* Responsive to container width */
     overflow: hidden; /* Hide any potential overflow */
     position: relative;
-    padding-top: 120%; /* Maintain a 1:1 aspect ratio at 50% height */
+    padding-top: 90%; /* Maintain a 1:1 aspect ratio at 50% height */
   }
 
   .svg-container iframe {
     width: 300%; /* Double the width to scale down to 50% */
-    height: 250%; /* Double the height to scale down to 50% */
-    transform: scale(0.3); /* Scale the content to 50% */
+    height: 320%; /* Double the height to scale down to 50% */
+    transform: scale(.3); /* Scale the content to 50% */
     transform-origin: top left; /* Scale from the top left corner */
     border: none;
     position: absolute;
@@ -285,6 +299,7 @@
 <li id="fn1"><p><a href="https://opendefinition.org/od/2.0/ua/" class="uri">https://opendefinition.org/od/2.0/ua/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p><a href="https://blog.ldodds.com/2015/02/20/comparing-the-5-star-scheme-with-open-data-certificates/" class="uri">https://blog.ldodds.com/2015/02/20/comparing-the-5-star-scheme-with-open-data-certificates/</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p><a href="https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data" class="uri">https://www.w3.org/2011/gld/wiki/5_Star_Linked_Data</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a href="https://www.w3.org/DesignIssues/LinkedData.html" class="uri">https://www.w3.org/DesignIssues/LinkedData.html</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
      </main>
