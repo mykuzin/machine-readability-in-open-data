@@ -60,7 +60,7 @@
         "Приклад RDF-розмітки виглядає так:\n",
         "\n",
         "\n",
-        "```{rdf}\n",
+        "```{code}\n",
         "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n",
         "@prefix ex: <http://example.org/> .\n",
         "\n",
@@ -71,7 +71,6 @@
         "\n",
         "ex:author1\n",
         "    dc:name \"Іван Коваленко\" .\n",
-        "\n",
         "```\n",
         "\n",
         "\n",
@@ -116,7 +115,7 @@
         "\n",
         "## Машиночитаність як відповідність потребам користувачів {#sec-data-methods}"
       ],
-      "id": "bd43a8c9"
+      "id": "1b63d5f7"
     }
   ],
   "metadata": {
